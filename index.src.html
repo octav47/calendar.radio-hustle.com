@@ -182,9 +182,11 @@ Use search to find needed section.
                             <div class="widget-body-toolbar">
                                 <div id="calendar-buttons">
                                     <div class="btn-group"><a href="javascript:void(0)" class="btn btn-default btn-xs"
-                                                              id="btn-prev"><i class="fa fa-2x fa-chevron-left"></i></a> <a
-                                            href="javascript:void(0)" class="btn btn-default btn-xs" id="btn-next"><i
-                                            class="fa fa-2x fa-chevron-right"></i></a></div>
+                                                              id="btn-prev"><i class="fa fa-2x fa-chevron-left"></i></a>
+                                        <a
+                                                href="javascript:void(0)" class="btn btn-default btn-xs"
+                                                id="btn-next"><i
+                                                class="fa fa-2x fa-chevron-right"></i></a></div>
                                 </div>
                             </div>
                             <div id="calendar"></div><!-- end content --></div>
@@ -363,8 +365,8 @@ $(document).ready(function () {
                     element.find('.fc-title').html('<a href="' + event.href + '" target="_blank">' + event.title + '</a>')
                 },
 
-                eventAfterRender: function(event, element, view) {
-                    $(view).css('width','50px');
+                eventAfterRender: function (event, element, view) {
+                    $(view).css('width', '50px');
                 },
 
                 windowResize: function (event, ui) {
@@ -416,7 +418,7 @@ $(document).ready(function () {
         }
     });
 
-    function showCalendarNotification () {
+    function showCalendarNotification() {
         if (window.innerWidth < 700 && window.innerHeight > window.innerWidth) {
             $('#notification').removeClass('hidden');
         } else {
@@ -437,11 +439,12 @@ $(document).ready(function () {
     showCalendarNotification();
     resizeWorkDayTd();
 })</script><!-- Yandex.Metrika counter -->
-<script type="text/javascript">(function (d, w, c) {
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript"> (function (d, w, c) {
     (w[c] = w[c] || []).push(function () {
         try {
-            w.yaCounter40501360 = new Ya.Metrika({
-                id: 40501360,
+            w.yaCounter28261681 = new Ya.Metrika({
+                id: 28261681,
                 clickmap: true,
                 trackLinks: true,
                 accurateTrackBounce: true,
@@ -461,8 +464,8 @@ $(document).ready(function () {
     } else {
         f();
     }
-})(document, window, "yandex_metrika_callbacks");</script>
+})(document, window, "yandex_metrika_callbacks"); </script>
 <noscript>
-    <div><img src="https://mc.yandex.ru/watch/40501360" style="position:absolute; left:-9999px" alt=""></div>
-</noscript><!-- /Yandex.Metrika counter --></body>
+    <div><img src="https://mc.yandex.ru/watch/28261681" style="position:absolute; left:-9999px;" alt=""/></div>
+</noscript> <!-- /Yandex.Metrika counter --></body>
 </html>
