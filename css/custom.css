@@ -1,0 +1,72 @@
+/*
+ * It is advised not to edit the smartadmin_production.css
+ * as this will override any changes you make in the
+ * later versions of this theme.
+ *
+ * We advise that you use use this CSS to override
+ * SmartAdmin styles.
+ *
+ * Rename the stylesheet to whatever your liking so it will stay
+ * unique to you with each update of SmartAdmin.
+ */
+
+/*
+ * INDEX
+ *
+ * - HTML
+ * - BODY
+ * - CUSTOM STYLES
+ */
+
+/*
+
+.smart-style-4 aside {
+    background: #3c3f7f;
+}
+
+.smart-style-4 nav ul li a {
+    color: #ffffff;
+}
+
+.smart-style-4 nav ul li.open > a, .smart-style-4 nav ul ul, .smart-style-4.minified nav li li, .smart-style-4.minified nav ul ul {
+    background: #3c3f7f;
+}
+
+.smart-style-4:not(.menu-on-top) nav ul li a:hover {
+    background: #37396b;
+    color: #fff;
+}
+*/
+
+.smart-style-4 #header>:first-child {
+    color: #ffffff;
+    background: #3a3f51;
+}
+
+#logo {
+    font-size: 30px;
+    width: 100%;
+    height: 49px !important;
+    line-height: 49px;
+    margin: 0;
+    text-align: center;
+}
+
+#logo > a {
+    color: #ffffff !important;
+}
+
+.page-footer {
+    height: 52px;
+    padding: 15px 13px 0 233px;
+    border-top: 1px solid #CECECE;
+    background: #383c4c;
+    width: 100%;
+    position: absolute;
+    display: block;
+    bottom: 0;
+}
+
+* {
+    font-family: Ubuntu, sans-serif;
+}
