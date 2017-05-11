@@ -48,7 +48,7 @@
 }
 
 #logo {
-    font-size: 30px;
+    font-size: 200%;
     width: 100%;
     height: 49px !important;
     line-height: 49px;
@@ -87,4 +87,8 @@
     padding: 15px;
     text-align: center;
     color: #4c4f53;
+}
+
+#notification {
+    padding: 5px;
 }
