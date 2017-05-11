@@ -388,11 +388,13 @@ $(document).ready(function () {
 
             $('#calendar-buttons #btn-prev').click(function () {
                 $('.fc-prev-button').click();
+                resizeWorkDayTd();
                 return false;
             });
 
             $('#calendar-buttons #btn-next').click(function () {
                 $('.fc-next-button').click();
+                resizeWorkDayTd();
                 return false;
             });
 
