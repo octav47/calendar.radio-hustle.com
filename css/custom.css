@@ -75,6 +75,17 @@
     font-family: Ubuntu, sans-serif;
 }
 
+.fc-row.fc-widget-header th:nth-child(-n+5) {
+    padding: 0;
+    width: 75px;
+}
+
+.fc-bg td:nth-child(-n+5),
+.fc-content-skeleton td:nth-child(-n+5) {
+    padding: 0;
+    width: 75px;
+}
+
 .fc-time {
     display: none !important;
 }

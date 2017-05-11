@@ -363,6 +363,10 @@ $(document).ready(function () {
                     element.find('.fc-title').html('<a href="' + event.href + '" target="_blank">' + event.title + '</a>')
                 },
 
+                eventAfterRender: function(event, element, view) {
+                    $(view).css('width','50px');
+                },
+
                 windowResize: function (event, ui) {
                     $('#calendar').fullCalendar('render');
                 },
