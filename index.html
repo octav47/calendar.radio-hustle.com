@@ -27,7 +27,7 @@
 
     <!-- We recommend you use "your_style.css" to override SmartAdmin
          specific styles this will also ensure you retrain your customization with each SmartAdmin update. -->
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Ubuntu" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Ubuntu"/>
     <link rel="stylesheet" type="text/css" media="screen" href="css/custom.css">
 
     <!-- Demo purpose only: goes with demo.js, you can delete this css when designing your own WebApp -->
@@ -157,8 +157,8 @@ Use search to find needed section.
             </li>
 
             <li>
-            <a href="http://hustlefm.ru/" target="_blank"><i class="fa fa-lg fa-fw fa-music"></i><span
-                    class="menu-item-parent">Прямой эфир</span></a>
+                <a href="http://hustlefm.ru/" target="_blank"><i class="fa fa-lg fa-fw fa-music"></i><span
+                        class="menu-item-parent">Прямой эфир</span></a>
             </li>
 
             <li class="active">
@@ -167,13 +167,13 @@ Use search to find needed section.
             </li>
 
             <li>
-            <a href="http://radio-hustle.com/dancers/"><i class="fa fa-lg fa-fw fa-database"></i><span
-                    class="menu-item-parent">База танцоров АСХ</span></a>
+                <a href="http://radio-hustle.com/dancers/"><i class="fa fa-lg fa-fw fa-database"></i><span
+                        class="menu-item-parent">База танцоров АСХ</span></a>
             </li>
 
             <li>
-            <a href="http://radio-hustle.com/discofoxan/"><i class="fa fa-lg fa-fw fa-table"></i><span
-                    class="menu-item-parent">Discofox Analytics</span></a>
+                <a href="http://radio-hustle.com/discofoxan/"><i class="fa fa-lg fa-fw fa-table"></i><span
+                        class="menu-item-parent">Discofox Analytics</span></a>
             </li>
 
             <li>
@@ -181,19 +181,24 @@ Use search to find needed section.
                         class="menu-item-parent">Сервисы</span></a>
                 <ul>
                     <li>
-                    <a href="http://radio-hustle.com/player/"><i class="fa fa-lg fa-fw fa-play"></i><span class="menu-item-parent"> Плеер</span></a>
+                        <a href="http://radio-hustle.com/player/"><i class="fa fa-lg fa-fw fa-play"></i><span
+                                class="menu-item-parent"> Плеер</span></a>
                     </li>
                     <li>
-                    <a href="http://radio-hustle.com/compare/"><i class="fa fa-lg fa-fw fa-exchange"></i><span class="menu-item-parent"> Сравнение танцоров</span></a>
+                        <a href="http://radio-hustle.com/compare/"><i class="fa fa-lg fa-fw fa-exchange"></i><span
+                                class="menu-item-parent"> Сравнение танцоров</span></a>
                     </li>
                     <li>
-                    <a href="http://radio-hustle.com/calendar/"><i class="fa fa-lg fa-fw fa-calendar"></i><span class="menu-item-parent"> Календарь турниров</span></a>
+                        <a href="http://radio-hustle.com/calendar/"><i class="fa fa-lg fa-fw fa-calendar"></i><span
+                                class="menu-item-parent"> Календарь турниров</span></a>
                     </li>
                     <li>
-                    <a href="http://radio-hustle.com/stats/"><i class="fa fa-lg fa-fw fa-tasks"></i><span class="menu-item-parent"> Статистика</span></a>
+                        <a href="http://radio-hustle.com/stats/"><i class="fa fa-lg fa-fw fa-tasks"></i><span
+                                class="menu-item-parent"> Статистика</span></a>
                     </li>
                     <li>
-                    <a href="http://radio-hustle.com/calc/"><i class="fa fa-lg fa-fw fa-calculator"></i><span class="menu-item-parent"> Калькулятор очков</span></a>
+                        <a href="http://radio-hustle.com/calc/"><i class="fa fa-lg fa-fw fa-calculator"></i><span
+                                class="menu-item-parent"> Калькулятор очков</span></a>
                     </li>
                 </ul>
             </li>
@@ -203,10 +208,12 @@ Use search to find needed section.
                         class="menu-item-parent">О нас</span></a>
                 <ul>
                     <li>
-                    <a href="http://radio-hustle.com/blog/"><i class="fa fa-lg fa-fw fa-rss"></i><span class="menu-item-parent"> Блог</span></a>
+                        <a href="http://radio-hustle.com/blog/"><i class="fa fa-lg fa-fw fa-rss"></i><span
+                                class="menu-item-parent"> Блог</span></a>
                     </li>
                     <li>
-                    <a href="http://radio-hustle.com/donate/"><i class="fa fa-lg fa-fw fa-code-fork"></i><span class="menu-item-parent"> Помощь проекту</span></a>
+                        <a href="http://radio-hustle.com/donate/"><i class="fa fa-lg fa-fw fa-code-fork"></i><span
+                                class="menu-item-parent"> Помощь проекту</span></a>
                     </li>
                 </ul>
             </li>
@@ -340,7 +347,8 @@ Use search to find needed section.
 <div class="page-footer">
     <div class="row">
         <div class="col-xs-12 col-sm-6">
-            <span class="txt-color-white">Radio Hustle <span class="hidden-xs"> — сервисы для танцоров</span> © 2015 - <span id="current-year"></span></span>
+            <span class="txt-color-white">Radio Hustle <span
+                    class="hidden-xs"> — сервисы для танцоров</span> © 2015 - <span id="current-year"></span></span>
             <script>
                 document.getElementById('current-year').innerText = new Date().getFullYear();
             </script>
@@ -450,9 +458,6 @@ you can add as many as you like
 
 <![endif]-->
 
-<!-- Demo purpose only -->
-<script src="js/demo.min.js"></script>
-
 <!-- MAIN APP JS FILE -->
 <script src="js/app.min.js"></script>
 
@@ -471,7 +476,14 @@ you can add as many as you like
 
 <script type="text/javascript">
 
-    // DO NOT REMOVE : GLOBAL FUNCTIONS!
+    function fixDate(string) {
+        return string.split('-').map(function (e) {
+            if (e.length == 1) {
+                e = '0' + e;
+            }
+            return e;
+        }).join('-');
+    }
 
     $(document).ready(function () {
 
@@ -491,151 +503,134 @@ you can add as many as you like
             right: 'prev,today,next'
         };
 
-
-        /* initialize the calendar
-         -----------------------------------------------------------------*/
-
-        $('#calendar').fullCalendar({
-
-            header: hdr,
-            editable: false,
-            droppable: false, // this allows things to be dropped onto the calendar !!!
-
-            drop: function (date, allDay) { // this function is called when something is dropped
-
-                // retrieve the dropped element's stored Event Object
-                var originalEventObject = $(this).data('eventObject');
-
-                // we need to copy it, so that multiple events don't have a reference to the same object
-                var copiedEventObject = $.extend({}, originalEventObject);
-
-                // assign it the date that was reported
-                copiedEventObject.start = date;
-                copiedEventObject.allDay = allDay;
-
-                // render the event on the calendar
-                // the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
-                $('#calendar').fullCalendar('renderEvent', copiedEventObject, true);
-
-                // is the "remove after drop" checkbox checked?
-                if ($('#drop-remove').is(':checked')) {
-                    // if so, remove the element from the "Draggable Events" list
-                    $(this).remove();
-                }
-
+        $.ajax({
+            url: './data/contests.json',
+            beforeSend: function () {
+                $('#calendar').parent().append('<div id="loading"><i class="fa fa-5x fa-spin fa-spinner"></i></div>');
             },
+            success: function (data) {
+                var events = data.events.map(function (e) {
+                    var date = e.innerHTML.match(/\(.*?\)/g);
+                    if (date === null) {
+                        e.start = new Date(e.date);
+                    } else {
+                        date = date[0].replace(/\(|\)/g, '').replace(/\./g, '-');
 
-            select: function (start, end, allDay) {
-                var title = prompt('Event Title:');
-                if (title) {
-                    calendar.fullCalendar('renderEvent', {
-                                title: title,
-                                start: start,
-                                end: end,
-                                allDay: allDay
-                            }, true // make the event "stick"
-                    );
-                }
-                calendar.fullCalendar('unselect');
+                        var dateSplit = date.split(/,|(\s*и\s*)|\//);
+                        if (dateSplit.length > 1) {
+                            e.start = fixDate(dateSplit[0]);
+
+                            e.end = fixDate(dateSplit[0].replace(/-\d+$/, '-' + dateSplit[2]));
+
+                            if (e.end.split('-')[2] - e.start.split('-')[2] > 1) {
+                                delete e.end;
+                            }
+                        } else {
+                            e.start = fixDate(date);
+                        }
+                    }
+
+                    e.title = e.innerHTML
+                            .replace(/&#39;/g, '\'')
+                            .replace(/&#33;/g, '!')
+                            .replace(/&quot;/g, '')
+                            .replace(/\((.*?)\)/, '')
+                            .trim();
+                    e.className = ['event', 'bg-color-blue'];
+                    e.icon = '';
+
+                    e.start = e.start + 'T10:00:00';
+                    if (e.end) {
+                        e.end = e.end + 'T23:00:00';
+                    } else {
+                        e.allDay = true;
+                    }
+
+                    console.log(e.title + ' ' + e.start + ' ' + e.end);
+
+                    return e;
+                });
+                console.log(events);
+                $('#calendar').fullCalendar({
+
+                    header: hdr,
+                    editable: false,
+                    droppable: false, // this allows things to be dropped onto the calendar !!!
+
+                    select: function (start, end, allDay) {
+                        var title = prompt('Event Title:');
+                        if (title) {
+                            calendar.fullCalendar('renderEvent', {
+                                        title: title,
+                                        start: start,
+                                        end: end,
+                                        allDay: allDay
+                                    }, true // make the event "stick"
+                            );
+                        }
+                        calendar.fullCalendar('unselect');
+                    },
+
+                    events: events,
+
+                    eventRender: function (event, element, icon) {
+                        if (!event.description == '') {
+                            element.find('.fc-title').append("<br/><span class='ultra-light'>" + event.description +
+                                    "</span>");
+                        }
+                        if (!event.icon == "") {
+                            element.find('.fc-title').append("<i class='air air-top-right fa " + event.icon +
+                                    " '></i>");
+                        }
+                        element.find('.fc-title').html('<a href="' + event.href + '" target="_blank">' + event.title + '</a>')
+                    },
+
+                    windowResize: function (event, ui) {
+                        $('#calendar').fullCalendar('render');
+                    },
+
+                    firstDay: 1,
+                    monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'οюнь', 'οюль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+                    monthNamesShort: ['Янв.', 'Фев.', 'Март', 'Апр.', 'Май', 'Июнь', 'Июль', 'Авг.', 'Сент.', 'Окт.', 'Ноя.', 'Дек.'],
+                    dayNames: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
+                    dayNamesShort: ['ВС', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ']
+                });
+
+                /* hide default buttons */
+                $('.fc-right, .fc-center').hide();
+
+
+                $('#calendar-buttons #btn-prev').click(function () {
+                    $('.fc-prev-button').click();
+                    return false;
+                });
+
+                $('#calendar-buttons #btn-next').click(function () {
+                    $('.fc-next-button').click();
+                    return false;
+                });
+
+                $('#calendar-buttons #btn-today').click(function () {
+                    $('.fc-today-button').click();
+                    return false;
+                });
+
+                $('#mt').click(function () {
+                    $('#calendar').fullCalendar('changeView', 'month');
+                });
+
+                $('#ag').click(function () {
+                    $('#calendar').fullCalendar('changeView', 'agendaWeek');
+                });
+
+                $('#td').click(function () {
+                    $('#calendar').fullCalendar('changeView', 'agendaDay');
+                });
             },
-
-            events: [{
-                title: 'All Day Event',
-                start: new Date(y, m, 1),
-                description: 'long description',
-                className: ["event", "bg-color-greenLight"],
-                icon: 'fa-check'
-            }, {
-                title: 'Long Event',
-                start: new Date(y, m, d - 5),
-                end: new Date(y, m, d - 2),
-                className: ["event", "bg-color-red"],
-                icon: 'fa-lock'
-            }, {
-                id: 999,
-                title: 'Repeating Event',
-                start: new Date(y, m, d - 3, 16, 0),
-                allDay: false,
-                className: ["event", "bg-color-blue"],
-                icon: 'fa-clock-o'
-            }, {
-                id: 999,
-                title: 'Repeating Event',
-                start: new Date(y, m, d + 4, 16, 0),
-                allDay: false,
-                className: ["event", "bg-color-blue"],
-                icon: 'fa-clock-o'
-            }, {
-                title: 'Meeting',
-                start: new Date(y, m, d, 10, 30),
-                allDay: false,
-                className: ["event", "bg-color-darken"]
-            }, {
-                title: 'Lunch',
-                start: new Date(y, m, d, 12, 0),
-                end: new Date(y, m, d, 14, 0),
-                allDay: false,
-                className: ["event", "bg-color-darken"]
-            }, {
-                title: 'Birthday Party',
-                start: new Date(y, m, d + 1, 19, 0),
-                end: new Date(y, m, d + 1, 22, 30),
-                allDay: false,
-                className: ["event", "bg-color-darken"]
-            }, {
-                title: 'Smartadmin Open Day',
-                start: new Date(y, m, 28),
-                end: new Date(y, m, 29),
-                className: ["event", "bg-color-darken"]
-            }],
-
-            eventRender: function (event, element, icon) {
-                if (!event.description == "") {
-                    element.find('.fc-title').append("<br/><span class='ultra-light'>" + event.description +
-                            "</span>");
-                }
-                if (!event.icon == "") {
-                    element.find('.fc-title').append("<i class='air air-top-right fa " + event.icon +
-                            " '></i>");
-                }
-            },
-
-            windowResize: function (event, ui) {
-                $('#calendar').fullCalendar('render');
+            complete: function () {
+                $('#loading').remove();
             }
         });
-
-        /* hide default buttons */
-        $('.fc-right, .fc-center').hide();
-
-
-        $('#calendar-buttons #btn-prev').click(function () {
-            $('.fc-prev-button').click();
-            return false;
-        });
-
-        $('#calendar-buttons #btn-next').click(function () {
-            $('.fc-next-button').click();
-            return false;
-        });
-
-        $('#calendar-buttons #btn-today').click(function () {
-            $('.fc-today-button').click();
-            return false;
-        });
-
-        $('#mt').click(function () {
-            $('#calendar').fullCalendar('changeView', 'month');
-        });
-
-        $('#ag').click(function () {
-            $('#calendar').fullCalendar('changeView', 'agendaWeek');
-        });
-
-        $('#td').click(function () {
-            $('#calendar').fullCalendar('changeView', 'agendaDay');
-        });
-
     })
 
 </script>

@@ -38,7 +38,11 @@
 }
 */
 
-.smart-style-4 #header>:first-child {
+.smart-style-4 #header {
+    background: #3a3f51;
+}
+
+.smart-style-4 #header > :first-child {
     color: #ffffff;
     background: #3a3f51;
 }
@@ -69,4 +73,18 @@
 
 * {
     font-family: Ubuntu, sans-serif;
+}
+
+.fc-time {
+    display: none !important;
+}
+
+.fc-title a {
+    color: #ffffff;
+}
+
+#loading {
+    padding: 15px;
+    text-align: center;
+    color: #4c4f53;
 }
