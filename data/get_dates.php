@@ -1718,23 +1718,45 @@ class simple_html_dom
     function loadFile() {$args = func_get_args();$this->load_file($args);}
 }
 
-    $w = "{\n  \"events\":[";
+    // $events = array();
+    $w = '{"events":[';
     for ($i = 0; $i < 500; $i += 15) {
     	$html = file_get_html('http://hustle-sa.ru/forum/index.php?showforum=6&prune_day=100&sort_by=Z-A&sort_key=title&st=' . $i);
     	foreach($html->find('.tableborder table tbody td.row4 a[title]') as $element) { //выборка всех тегов img на странице
-           $hrefElement = preg_replace('/s=.*;/i', '', $element->href);
-           $title = $element->title;
-           // $title = preg_replace('/qout;/gi', '', $element->title);
-           $innerHTML = $element->text();
-           // $innerHTML = preg_replace("/qout/gi", '', $innerHTML);
-           preg_match("/(\d{4}-\d{2}-\d{2})/i", $element->text(), $m);
-           $w = $w . "\n    {\n      \"href\":\"" . $hrefElement . "\",\n      \"title\":\"" . $title . "\",\n      \"innerHTML\":\"" . $innerHTML . "\",\n      \"date\":\"" . $m[1] . "\"\n    },"; // построчный вывод содержания всех найденных атрибутов src
+    	    // $event = array();
+
+            // $element = $row->find('a[title]');
+            $parent = $element->parent();
+            $hrefElement = preg_replace('/s=.*;/i', '', $element->href);
+            $title = $element->title;
+            // $title = preg_replace('/qout;/gi', '', $element->title);
+            $innerHTML = $element->text();
+            // $innerHTML = preg_replace("/qout/gi", '', $innerHTML);
+            preg_match("/(\d{4}-\d{2}-\d{2})/i", $element->text(), $m);
+
+            $description = $parent->children(2)->text();
+            preg_match("/^(.*)\,/i", $description, $city);
+
+            // $event["title"] = $element->title;
+            // $event["href"] = preg_replace('/s=.*;/i', '', $element->href);
+            // $event["innerHTML"] = $element->text();
+            // $event["date"] = $m[1];
+            // $event["city"] = $city[1];
+
+            // $events[] = $event;
+
+            $w .= '{"href":"' . $hrefElement . '","title":"' . $title . '","innerHTML":"' . $innerHTML . '","city": "' . $city[1] . '","date":"' . $m[1] . '"},'; // построчный вывод содержания всех найденных атрибутов src
     	}
     }
     $w = rtrim($w, ",");
-    $w = $w . "\n  ]\n}";
+    $w = $w . ']}';
     // echo $w;
     echo mb_detect_encoding($w);
     // $w = mb_convert_encoding($w, 'UTF-8');
     file_put_contents('contests.json', iconv("windows-1251", "UTF-8", $w));
+
+    // var_dump($events);
+
+    // var_dump(json_encode($events, JSON_UNESCAPED_UNICODE));
+    // var_dump(json_last_error_msg());
 ?>

@@ -283,6 +283,11 @@ $(document).ready(function () {
         right: 'prev,today,next'
     };
 
+    var citiesBackground = {
+        'г. москва': 'bg-color-greenLight',
+        'г. санкт-петербург': 'bg-color-redLight'
+    };
+
     $.ajax({
         url: './data/contests.json',
         beforeSend: function () {
@@ -316,7 +321,11 @@ $(document).ready(function () {
                         .replace(/&quot;/g, '')
                         .replace(/\((.*?)\)/, '')
                         .trim();
-                e.className = ['event', 'bg-color-blue'];
+                var background = citiesBackground[e.city.toLowerCase()];
+                if (!background) {
+                    background = 'bg-color-blue';
+                }
+                e.className = ['event', background];
                 e.icon = '';
 
                 e.start = e.start + 'T10:00:00';
@@ -327,7 +336,7 @@ $(document).ready(function () {
                 }
 
                 // fix
-                console.log(e.title + ' ' + (e.title == 'Nord Cup 2017'));
+//                console.log(e.title + ' ' + (e.title == 'Nord Cup 2017'));
                 if (e.title == 'Nord Cup 2017') {
                     e.start = '2017-03-17T10:00:00';
                     e.end = '2017-03-19T23:00:00';
@@ -336,7 +345,7 @@ $(document).ready(function () {
 
                 return e;
             });
-            console.log(events);
+//            console.log(events);
             $('#calendar').fullCalendar({
 
                 header: hdr,
@@ -368,7 +377,11 @@ $(document).ready(function () {
                         element.find('.fc-title').append("<i class='air air-top-right fa " + event.icon +
                                 " '></i>");
                     }
-                    element.find('.fc-title').html('<a href="' + event.href + '" target="_blank">' + event.title + '</a>')
+                    element.find('.fc-title').html('<a href="' + event.href + '" target="_blank">' + event.title + '</a>');
+
+                    if (event.city !== '') {
+                        element.append('<span class="fc-city">' + event.city + '</span>');
+                    }
                 },
 
                 eventAfterRender: function (event, element, view) {
